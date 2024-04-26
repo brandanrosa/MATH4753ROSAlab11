@@ -10,8 +10,13 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.1
 Imports:
-  ggplot2
+  ggplot2,
+  shiny
 Depends: 
     R (>= 2.10)
 URL: https://github.com/brandanrosa/MATH4753ROSAlab11
 BugReports: https://github.com/brandanrosa/MATH4753ROSAlab11/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

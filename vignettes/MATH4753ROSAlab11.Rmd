@@ -1,0 +1,64 @@
+---
+title: "Lab 11 - Tests of Hypotheses Part 1"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Lab 11 - Tests of Hypotheses Part 1}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753ROSAlab11)
+```
+
+# Introduction 
+
+This package contains a wonderful function which produces a histogram and an output named list containing, among other items, the confidence interval and the critical t-values.
+
+# The Function - `ciNonSym`
+
+To show this function off, we will examine the `Length` data from the `DDT` data set.
+
+```{r, fig.align = "center", fig.width=7, fig.height=5}
+library(ggplot2)
+
+l <- ciNonSym(x = ddt$LENGTH, 
+                        alpha = 0.05,
+                        alpha2 = 0.02, 
+                        mu0 = 45, 
+                        epsilon = 4,
+                        bins = 25)
+
+l
+```
+
+# Shiny App - `shinyfishies`
+
+# `shinytrains`
+
+To view the app, run the following code in an active `R` session.
+
+`shiny::runGitHub(repo = "MATH4753ROSAlab11", username = "brandanrosa", subdir = "inst/shinyfishies")`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
